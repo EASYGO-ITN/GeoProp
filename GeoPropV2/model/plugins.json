@@ -1,0 +1,21 @@
+{
+  "plugins": [".model_plugins.Reaktoro_plugin",
+    ".model_plugins.SpycherPruess2009_plugin",
+    ".model_plugins.CoolProp_plugin",
+    ".model_plugins.ThermoFun_plugin"],
+
+  "model": [
+    {
+      "name": "reaktoro"
+    },
+    {
+      "name": "spycher_pruess_2009"
+    },
+    {
+      "name": "coolprop"
+    },
+    {
+      "name": "thermofun"
+    }
+  ]
+}

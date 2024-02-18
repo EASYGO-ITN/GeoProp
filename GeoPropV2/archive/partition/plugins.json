@@ -1,0 +1,11 @@
+{
+  "plugins": [".partition_plugins.Reaktoro_plugin",".partition_plugins.SpycherPruess2009_plugin"],
+  "engines": [
+    {
+      "type": "reaktoro"
+    },
+    {
+      "type": "spycher_pruess_2009"
+    }
+  ]
+}

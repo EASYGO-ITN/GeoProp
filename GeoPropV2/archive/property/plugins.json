@@ -1,0 +1,14 @@
+{
+  "plugins": [".property_plugins.CoolProp_plugin",".property_plugins.ThermoFun_plugin", ".property_plugins.Reaktoro_plugin"],
+  "engines": [
+    {
+      "type": "coolprop"
+    },
+    {
+      "type": "thermofun"
+    },
+    {
+      "type": "reaktoro"
+    }
+  ]
+}
