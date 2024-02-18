@@ -1,0 +1,9 @@
+coolprop
+reaktoro
+thermofun
+thermohubclient
+matplotlib
+numpy
+
+
+
