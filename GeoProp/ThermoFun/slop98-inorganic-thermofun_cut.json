@@ -1,0 +1,2574 @@
+{
+  "datasources": [
+    "db.thermohub.org"
+  ],
+  "date": "18.08.2022 18:26:51",
+  "elements": [
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          0
+        ]
+      },
+      "class_": {
+        "4": "CHARGE"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          -65.3399963378906
+        ]
+      },
+      "symbol": "Zz"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          1.00794994831085
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          65.3399963378906
+        ]
+      },
+      "symbol": "H"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          4.00260019302368
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          126.15299987793
+        ]
+      },
+      "symbol": "He"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          6.94099998474121
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          29.1200008392334
+        ]
+      },
+      "symbol": "Li"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          9.01218032836914
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          9.5
+        ]
+      },
+      "symbol": "Be"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          10.8120002746582
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          5.90000009536743
+        ]
+      },
+      "symbol": "B"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          12.0108003616333
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          5.73999977111816
+        ]
+      },
+      "symbol": "C"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          14.0066995620728
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          95.8044967651367
+        ]
+      },
+      "symbol": "N"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          14.0066995620728
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          95.8044967651367
+        ]
+      },
+      "symbol": "Nia"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          15.999400138855
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          102.569000244141
+        ]
+      },
+      "symbol": "O"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          18.9983997344971
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          101.395500183105
+        ]
+      },
+      "symbol": "F"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          20.1790008544922
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          146.328002929688
+        ]
+      },
+      "symbol": "Ne"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          22.9897994995117
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          51.2999992370605
+        ]
+      },
+      "symbol": "Na"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          24.3050003051758
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          32.6699981689453
+        ]
+      },
+      "symbol": "Mg"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          26.9815406799316
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          28.2999992370605
+        ]
+      },
+      "symbol": "Al"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          28.0855007171631
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          18.8099994659424
+        ]
+      },
+      "symbol": "Si"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          30.9737606048584
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          41.0900001525879
+        ]
+      },
+      "symbol": "P"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          32.0670013427734
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          31.7980003356934
+        ]
+      },
+      "symbol": "S"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          35.4529991149902
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          111.540496826172
+        ]
+      },
+      "symbol": "Cl"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          39.0983009338379
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          64.6799926757812
+        ]
+      },
+      "symbol": "K"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          39.9480018615723
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          154.845993041992
+        ]
+      },
+      "symbol": "Ar"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          40.0779991149902
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          41.5900001525879
+        ]
+      },
+      "symbol": "Ca"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          44.9560012817383
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          34.6399993896484
+        ]
+      },
+      "symbol": "Sc"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          47.8800010681152
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          30.7199993133545
+        ]
+      },
+      "symbol": "Ti"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          50.9420013427734
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          28.9099998474121
+        ]
+      },
+      "symbol": "V"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          51.9959983825684
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          23.7700004577637
+        ]
+      },
+      "symbol": "Cr"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          54.9379997253418
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          32.0099983215332
+        ]
+      },
+      "symbol": "Mn"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          55.8450012207031
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          27.2800006866455
+        ]
+      },
+      "symbol": "Fe"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          58.693000793457
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          29.8700008392334
+        ]
+      },
+      "symbol": "Ni"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          58.9332008361816
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          30.0400009155273
+        ]
+      },
+      "symbol": "Co"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          63.5460014343262
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          33.1500015258789
+        ]
+      },
+      "symbol": "Cu"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          65.379997253418
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          41.6300010681152
+        ]
+      },
+      "symbol": "Zn"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          69.7199935913086
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          40.8800010681152
+        ]
+      },
+      "symbol": "Ga"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          74.9215927124023
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          35.689998626709
+        ]
+      },
+      "symbol": "As"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          78.9599990844727
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          42.2700004577637
+        ]
+      },
+      "symbol": "Se"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          79.9039993286133
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          76.1050033569336
+        ]
+      },
+      "symbol": "Br"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          83.8000030517578
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          164.085006713867
+        ]
+      },
+      "symbol": "Kr"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          85.4677963256836
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          76.7799987792969
+        ]
+      },
+      "symbol": "Rb"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          87.620002746582
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          55.7000007629395
+        ]
+      },
+      "symbol": "Sr"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          88.9049987792969
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          44.4300003051758
+        ]
+      },
+      "symbol": "Y"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          91.2239990234375
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          39
+        ]
+      },
+      "symbol": "Zr"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          92.9059982299805
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          36.4000015258789
+        ]
+      },
+      "symbol": "Nb"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          95.9399871826172
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          28.6599998474121
+        ]
+      },
+      "symbol": "Mo"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          97.9069976806641
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "PSI-Nagra-12-07"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          32.5
+        ]
+      },
+      "symbol": "Tc"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          101.069999694824
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          28.5300006866455
+        ]
+      },
+      "symbol": "Ru"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          102.904998779297
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          31.5100002288818
+        ]
+      },
+      "symbol": "Rh"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          106.419998168945
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          37.8199996948242
+        ]
+      },
+      "symbol": "Pd"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          107.868202209473
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          42.5499992370605
+        ]
+      },
+      "symbol": "Ag"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          112.410003662109
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          51.7999992370605
+        ]
+      },
+      "symbol": "Cd"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          114.819999694824
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          57.8199996948242
+        ]
+      },
+      "symbol": "In"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          118.710998535156
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          51.2120018005371
+        ]
+      },
+      "symbol": "Sn"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          121.75
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          45.689998626709
+        ]
+      },
+      "symbol": "Sb"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          126.903999328613
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          58.0699996948242
+        ]
+      },
+      "symbol": "I"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          131.289993286133
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          169.684997558594
+        ]
+      },
+      "symbol": "Xe"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          132.905395507812
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          85.2300033569336
+        ]
+      },
+      "symbol": "Cs"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          137.328002929688
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          62.4199981689453
+        ]
+      },
+      "symbol": "Ba"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          138.910003662109
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          56.9000015258789
+        ]
+      },
+      "symbol": "La"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          140.119995117188
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          72
+        ]
+      },
+      "symbol": "Ce"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          140.906997680664
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          73.1999969482422
+        ]
+      },
+      "symbol": "Pr"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          144.240005493164
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          71.5
+        ]
+      },
+      "symbol": "Nd"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          150.350006103516
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          69.5800018310547
+        ]
+      },
+      "symbol": "Sm"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          151.964004516602
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          77.7799987792969
+        ]
+      },
+      "symbol": "Eu"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          157.25
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          68.0699996948242
+        ]
+      },
+      "symbol": "Gd"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          158.92399597168
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          73.2200012207031
+        ]
+      },
+      "symbol": "Tb"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          162.5
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          74.7699966430664
+        ]
+      },
+      "symbol": "Dy"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          164.929992675781
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          75.3000030517578
+        ]
+      },
+      "symbol": "Ho"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          167.259994506836
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          73.1800003051758
+        ]
+      },
+      "symbol": "Er"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          168.934005737305
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          74.0100021362305
+        ]
+      },
+      "symbol": "Tm"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          173.039993286133
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          59.8699989318848
+        ]
+      },
+      "symbol": "Yb"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          174.970001220703
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          50.9599990844727
+        ]
+      },
+      "symbol": "Lu"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          178.490005493164
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          43.560001373291
+        ]
+      },
+      "symbol": "Hf"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          183.850006103516
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          32.6399993896484
+        ]
+      },
+      "symbol": "W"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          186.199996948242
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          36.8600006103516
+        ]
+      },
+      "symbol": "Re"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          195.089996337891
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          41.6300010681152
+        ]
+      },
+      "symbol": "Pt"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          196.966995239258
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          47.4000015258789
+        ]
+      },
+      "symbol": "Au"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          200.589996337891
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          76.0199966430664
+        ]
+      },
+      "symbol": "Hg"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          204.369995117188
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          64.1799926757812
+        ]
+      },
+      "symbol": "Tl"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          207.199996948242
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          64.8000030517578
+        ]
+      },
+      "symbol": "Pb"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          208.979995727539
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          56.7400016784668
+        ]
+      },
+      "symbol": "Bi"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          222
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          176.210006713867
+        ]
+      },
+      "symbol": "Rn"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          226.024993896484
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          71
+        ]
+      },
+      "symbol": "Ra"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          232.038101196289
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          51.7999992370605
+        ]
+      },
+      "symbol": "Th"
+    },
+    {
+      "atomic_mass": {
+        "name": "M0i",
+        "values": [
+          238.028900146484
+        ]
+      },
+      "class_": {
+        "0": "ELEMENT"
+      },
+      "datasources": [
+        "Supcrt-Slop98"
+      ],
+      "entropy": {
+        "name": "S0i",
+        "values": [
+          50.2000007629395
+        ]
+      },
+      "symbol": "U"
+    }
+  ],
+  "reactions": [],
+  "substances": [
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "method": {
+            "31": "water_eos_hgk84_reaktoro"
+          }
+        },
+        {
+          "method": {
+            "25": "water_diel_jnort91_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "3": "SC_AQSOLVENT"
+      },
+      "datasources": [
+        "SUPCRT:1992:prog:               "
+      ],
+      "formula": "H2O@",
+      "formula_charge": 0,
+      "mass_per_mole": {
+        "values": [
+          18.015300750732
+        ]
+      },
+      "name": "Water HGK",
+      "sm_enthalpy": {
+        "errors": [
+          200
+        ],
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -285881
+        ]
+      },
+      "sm_entropy_abs": {
+        "errors": [
+          0.10000000149012
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          69.922996520996
+        ]
+      },
+      "sm_gibbs_energy": {
+        "errors": [
+          100
+        ],
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -237183
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          75.360527038574
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          1.8068397045136
+        ]
+      },
+      "symbol": "H2O@"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              -0.019470000639558,
+              -725.20001220703,
+              5.2965998649597,
+              -24791.998046875,
+              9,
+              -25220,
+              123660.0078125,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "Ca+2",
+      "formula_charge": 2,
+      "mass_per_mole": {
+        "values": [
+          40.07799911499
+        ]
+      },
+      "name": "Ca+2 ion",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -543083
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          -56.484001159668
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -552790
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          -30.922517776489
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          -1.8438999652862
+        ]
+      },
+      "symbol": "Ca+2"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              0.40320000052452,
+              480.10000610352,
+              5.563000202179,
+              -28469.998046875,
+              -4.4000000953674,
+              -57140.00390625,
+              145600,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "Cl-",
+      "formula_charge": -1,
+      "mass_per_mole": {
+        "values": [
+          35.45299911499
+        ]
+      },
+      "name": "Cl- ion",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -167080
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          56.735042572021
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -131290
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          -122.49036407471
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          1.734099984169
+        ]
+      },
+      "symbol": "Cl-"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              0.6246600151062,
+              747.10998535156,
+              2.813600063324,
+              -30879,
+              40.032501220703,
+              88004,
+              -2000,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "CO2@",
+      "formula_charge": 0,
+      "mass_per_mole": {
+        "values": [
+          44.009601593018
+        ]
+      },
+      "name": "CO2,aq (+ H2O = H2CO3,aq )",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -413798
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          117.57040405273
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -385974
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          243.08000183106
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          3.280699968338
+        ]
+      },
+      "symbol": "CO2@"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              0.35589998960495,
+              -147.30000305176,
+              5.4349999427795,
+              -27119.998046875,
+              7.4000000953674,
+              -17910,
+              19270,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "K+",
+      "formula_charge": 1,
+      "mass_per_mole": {
+        "values": [
+          39.098300933838
+        ]
+      },
+      "name": "K+ ion",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -252170
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          101.04000091553
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -282462
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          8.388801574707
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          0.90090000629425
+        ]
+      },
+      "symbol": "K+"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              -0.082169994711876,
+              -859.90002441406,
+              8.3900003433228,
+              -23900.001953125,
+              20.799999237061,
+              -58920.00390625,
+              153720,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "Mg+2",
+      "formula_charge": 2,
+      "mass_per_mole": {
+        "values": [
+          24.305000305176
+        ]
+      },
+      "name": "Mg+2 ion",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -465960
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          -138.07000732422
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -453985
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          -21.662000656128
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          -2.2014000415802
+        ]
+      },
+      "symbol": "Mg+2"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              0.18389999866486,
+              -228.50001525879,
+              3.2560000419617,
+              -27260,
+              18.180000305176,
+              -29810,
+              33060,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "Na+",
+      "formula_charge": 1,
+      "mass_per_mole": {
+        "values": [
+          22.989799499512
+        ]
+      },
+      "name": "Na+ ion",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -240300
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          58.408641815185
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -261881
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          38.118228912354
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          -0.12080000340939
+        ]
+      },
+      "symbol": "Na+"
+    },
+    {
+      "Pst": 100000,
+      "TPMethods": [
+        {
+          "eos_hkf_coeffs": {
+            "names": [
+              "a1",
+              "a2",
+              "a3",
+              "a4",
+              "c1",
+              "c2",
+              "wref"
+            ],
+            "units": [
+              "cal/(mol*bar)",
+              "cal/mol",
+              "(cal*K)/mol",
+              "cal/(mol*K)",
+              "(cal*K)/mol",
+              "cal/mol"
+            ],
+            "values": [
+              0.83013999462128,
+              -198.45999145508,
+              -6.2122001647949,
+              -26970,
+              1.6399999856949,
+              -179979.984375,
+              314630,
+              0
+            ]
+          },
+          "method": {
+            "3": "solute_hkf88_reaktoro"
+          }
+        }
+      ],
+      "Tst": 298.15,
+      "aggregate_state": {
+        "4": "AS_AQUEOUS"
+      },
+      "class_": {
+        "2": "SC_AQSOLUTE"
+      },
+      "datasources": [
+        "Slop98_dat:1998:data:           "
+      ],
+      "formula": "SO4-2",
+      "formula_charge": -2,
+      "mass_per_mole": {
+        "values": [
+          96.064605712891
+        ]
+      },
+      "name": "SO4-2 ion",
+      "sm_enthalpy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -909602
+        ]
+      },
+      "sm_entropy_abs": {
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          18.82799911499
+        ]
+      },
+      "sm_gibbs_energy": {
+        "units": [
+          "J/mol"
+        ],
+        "values": [
+          -744459
+        ]
+      },
+      "sm_heat_capacity_p": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/(mol*K)"
+        ],
+        "values": [
+          -266.08999633789
+        ]
+      },
+      "sm_volume": {
+        "errors": [
+          0
+        ],
+        "units": [
+          "J/bar"
+        ],
+        "values": [
+          1.2918000221252
+        ]
+      },
+      "symbol": "SO4-2"
+    }
+  ],
+  "thermodataset": [
+    "slop98-inorganic"
+  ]
+}
