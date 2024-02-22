@@ -5,6 +5,8 @@ import CoolProp as cp
 
 from .BaseModel import Model
 from ..model import factory
+from GeoPropV2.constants import R_bar, Units
+from GeoPropV2.fluid import PhaseProperties, AqueousPhase, VapourPhase, SolidPhase
 
 
 def register():
@@ -15,39 +17,12 @@ def register():
     -------
     NoReturn
     """
-    factory.register("spycher_pruess_2009", SpycherPruess2009)
+    factory.register("spycher_pruess_2009", SpycherPruess2009Model)
 
 
-class SpycherPruess2009(Model):
-
-    _partition = True
-    _properties = False
-    _properties_solid = False
-    _properties_aqueous = False
-    _properties_vapour = False
-
-    def __init__(self, *args, **kwargs):
-
-        super().__init__(args, kwargs)
-
-    def init_partition(self, fluid):
-
-        # something to initialise the calculation
-
-        self.__initialised = True
-
-    def calc_partition(self, P, T, fluid):
-
-        if not self.__initialised:
-
-            self.init_partition(fluid)
-
-        # something to calculate the state
-
-
-class Spycher_Pruss_2009:
+class SpycherPruess2009:
     """
-        The SpycherPruss2009 class contains the Spycher Pruss 2009 model for the mutual solubilities of H2O and CO2
+        The Spycher_Pruess_2009 class contains the Spycher Pruess 2009 model for the mutual solubilities of H2O and CO2
 
         Attributes
         ----------
@@ -76,8 +51,6 @@ class Spycher_Pruss_2009:
 
     Pmin = 1e5
     Pmax = 600e5
-
-    R = 83.144598  # bar.cm3/(mol.K)
 
     @staticmethod
     def interpolate(func, low, high, val, *args, **kwargs):
@@ -423,8 +396,8 @@ class Spycher_Pruss_2009:
         KCO2_H2O = self.K_CO2_H2O(T)
         KH2O_CO2 = self.K_H2O_CO2(T)
 
-        a2 = -self.R * T / Pbar
-        a1 = -(self.R * T * bmix/Pbar - amix/(Pbar * sqrt(T)) + bmix * bmix)
+        a2 = -R_bar * T / Pbar
+        a1 = -(R_bar * T * bmix/Pbar - amix/(Pbar * sqrt(T)) + bmix * bmix)
         a0 = -amix * bmix / (Pbar * sqrt(T))
 
         Vs = cubic_solver(a2, a1, a0)
@@ -434,10 +407,10 @@ class Spycher_Pruss_2009:
         T05 = sqrt(T)
         T15 = T05 * T
 
-        aux1 = (Pbar*V/(self.R*T)-1)/bmix
-        aux2 = -log(Pbar*(V-bmix)/(self.R*T))
+        aux1 = (Pbar*V/(R_bar*T)-1)/bmix
+        aux2 = -log(Pbar*(V-bmix)/(R_bar*T))
         aux3 = -(yH2O*yH2O*yCO2*(KH2O_CO2-KCO2_H2O) + yCO2*yCO2*yH2O*(KCO2_H2O-KH2O_CO2))*sqrt(aH2O*aCO2)
-        aux4 = (amix/(bmix*self.R*T15))*log(V/(V+bmix))
+        aux4 = (amix/(bmix*R_bar*T15))*log(V/(V+bmix))
 
         test = V/(V+bmix)
 
@@ -659,7 +632,7 @@ class Spycher_Pruss_2009:
 
         """
         Pbar = P * 1e-5
-        return self.K0_CO2(T) * exp((Pbar - self.Pref_CO2(T)) * self.V_CO2(T) / (self.R * T))
+        return self.K0_CO2(T) * exp((Pbar - self.Pref_CO2(T)) * self.V_CO2(T) / (R_bar * T))
 
     def K_H2O(self, T, P):
         """
@@ -678,7 +651,7 @@ class Spycher_Pruss_2009:
 
         """
         Pbar = P * 1e-5
-        return self.K0_H2O(T) * exp((Pbar - self.Pref_H2O(T)) * self.V_H2O(T) / (self.R * T))
+        return self.K0_H2O(T) * exp((Pbar - self.Pref_H2O(T)) * self.V_H2O(T) / (R_bar * T))
 
     def A_m(self, T):
         """
@@ -833,7 +806,7 @@ class Spycher_Pruss_2009:
             raise ValueError("The pressure ({} Pa)is above the maximum pressure ({} Pa)".format(P, self.Pmax))
 
         Pbar = P * 1e-5
-        mNa, mK, mCa, mMg, mCl, mSO4 = itemgetter("Na", "K", "Ca", "Mg", "Cl", "SO4")(ion_molalities)
+        mNa, mK, mCa, mMg, mCl, mSO4 = itemgetter("Na+", "K+", "Ca+2", "Mg+2", "Cl-", "SO4-2")(ion_molalities)
 
         KCO2 = self.K_CO2(T, P)
         KH2O = self.K_H2O(T, P)
@@ -875,106 +848,155 @@ class Spycher_Pruss_2009:
         return yH2O, xCO2, xSalt
 
 
-def cubic_solver(self, a2, a1, a0):
+def cubic_solver(a2, a1, a0):
 
-        p = (3 * a1 - a2 * a2) / 3
-        q = (2 * a2 * a2 * a2 - 9 * a2 * a1 + 27 * a0) / 27
+    p = (3 * a1 - a2 * a2) / 3
+    q = (2 * a2 * a2 * a2 - 9 * a2 * a1 + 27 * a0) / 27
 
-        R = q * q / 4 + p * p * p / 27
+    R = q * q / 4 + p * p * p / 27
 
-        if R <= 0:
-            # taken from https://en.wikipedia.org/wiki/Cubic_equation#Cardano's_formula:~:text=Trigonometric%20and%20hyperbolic%20solutions
-            m = 2 * sqrt(-p / 3)
-            theta = acos(3 * q / (p * m)) / 3
+    if R <= 0:
+        # taken from https://en.wikipedia.org/wiki/Cubic_equation#Cardano's_formula:~:text=Trigonometric%20and%20hyperbolic%20solutions
+        m = 2 * sqrt(-p / 3)
+        theta = acos(3 * q / (p * m)) / 3
 
-            x1 = m * cos(theta) - a2 / 3
-            x2 = m * cos(theta - 2 * pi / 3) - a2 / 3
-            x3 = m * cos(theta - 4 * pi / 3) - a2 / 3
-        else:
-            # taken from https://mathworld.wolfram.com/CubicFormula.html#:~:text=(48)-,Defining,-(49)
-            P = cbrt(-q / 2 + sqrt(R))
-            Q = cbrt(-q / 2 - sqrt(R))
+        x1 = m * cos(theta) - a2 / 3
+        x2 = m * cos(theta - 2 * pi / 3) - a2 / 3
+        x3 = m * cos(theta - 4 * pi / 3) - a2 / 3
+    else:
+        # taken from https://mathworld.wolfram.com/CubicFormula.html#:~:text=(48)-,Defining,-(49)
+        P = cbrt(-q / 2 + sqrt(R))
+        Q = cbrt(-q / 2 - sqrt(R))
 
-            x1 = P + Q - a2 / 3
-            x2 = x1
-            x3 = x1
+        x1 = P + Q - a2 / 3
+        x2 = x1
+        x3 = x1
 
-        return x1, x2, x3
+    return x1, x2, x3
 
 
-class SpycherPrussPartition:
-    """
-        The ReaktoroPartition class orchestrates the fluid partition using SpycherPruss2009
+class SpycherPruess2009Model(Model):
 
-        References
-        ----------
-        DOI: 10.1007/s11242-009-9425-y
-    """
+    _partition = True
+    _properties = False
+    _properties_solid = False
+    _properties_aqueous = False
+    _properties_vapour = False
 
-    Tmin = SpycherPruss2009.Tmin_low
-    Tmax = SpycherPruss2009.Tmax_high
+    _molar_masses = {"H2O": 0.01801528,
+                     "CO2": 0.04401,
+                     "Na+": 0.022989769,
+                     "NaCl": 0.05844,
+                     "Na2SO4": 0.14204,
+                     "K+": 0.0390983,
+                     "KCl": 0.0745513,
+                     "K2SO4": 0.174259,
+                     "Ca+2": 0.040078,
+                     "CaCl2": 0.11098,
+                     "CaSO4": 0.13614,
+                     "Mg+2": 0.024305,
+                     "MgCl2": 0.95211,
+                     "MgSO4": 0.120366,
+                     "Cl-": 0.035453,
+                     "SO4-2": 0.09606}
 
-    @staticmethod
-    def calc(fluid, P, T, options):
-        """
-        orchestrates the partition calculation using SpycherPruss 2009
+    _component_dict = {"Water": "H2O",
+                       "H2O": "H2O",
+                       "H2O(g)": "H2O",
+                       "H2O(aq)": "H2O",
+                       "H2O(l)": "H2O",
+                       "CarbonDioxide": "CO2",
+                       "CO2": "CO2",
+                       "CO2(g)": "CO2",
+                       "CO2(aq)": "CO2",
+                       "Na+": "Na+",
+                       "Na(aq)": "Na+",
+                       "K+": "K+",
+                       "K(aq)": "K+",
+                       "Ca+2": "Ca+2",
+                       "Ca(aq)": "Ca+2",
+                       "Mg+2": "Mg+2",
+                       "Mg(aq)": "Mg+",
+                       "Cl-": "Cl-",
+                       "Cl(aq)": "Cl-",
+                       "SO4-2": "SO4-2",
+                       "SO4(aq)": "SO4-2"
+                       }
 
-        Parameters
-        ----------
-        fluid: Fluid
-            the fluid to be partitioned
-        P: float
-            the pressure
-        T: float
-            the temperature
-        options: None
-            the calculation options - dummy input, not used
+    _compund_dict = {"NaCl": {"Na+": 1,
+                              "Cl-": 1},
+                     "Na2SO4": {"Na+": 2,
+                              "SO4-2": 1},
+                     "KCl": {"K+": 1,
+                              "Cl-": 1},
+                     "K2SO4": {"K+": 2,
+                              "SO4-2": 1},
+                     "CaCl2": {"Ca+2": 1,
+                               "Cl-": 2},
+                     "CaSO4": {"Ca+2": 1,
+                               "SO4-2": 1},
+                     "MgCl2": {"Mg+2": 1,
+                               "Cl-": 2},
+                     "MgSO4": {"Mg+2": 1,
+                               "SO4-2": 1}
+                     }
 
-        Returns
-        -------
-        Fluid
+    def __init__(self, *args, **kwargs):
 
-        """
+        super().__init__(args, kwargs)
 
-        MrH2O = 0.018015
-        MrCO2 = 0.044
+        self.__initialised = False
 
-        targetComps = [Comp.WATER, Comp.STEAM, Comp.Na_plus, Comp.K_plus, Comp.Ca_plus2, Comp.Mg_plus2, Comp.Cl_minus, Comp.SO4_minus2, Comp.CARBONDIOXIDE, Comp.CO3_minus2, Comp.CO2_aq]
+        self._components = {"H2O": 0, "CO2": 0, "Na+": 0, "K+": 0, "Ca+2": 0, "Mg+2": 0, "Cl-": 0, "SO4-2": 0}
+        self._molalities = {"Na+": 0.0, "K+": 0.0, "Ca+2": 0.0, "Mg+2": 0.0, "Cl-": 0.0, "SO4-2": 0.0}
 
-        moles = {"H2O": 0.0, "Na": 0.0, "K": 0.0, "Ca": 0.0, "Mg": 0.0, "Cl": 0.0, "SO4": 0.0, "CO2": 0.0}
-        molality = {"Na": 0.0, "K": 0.0, "Ca": 0.0, "Mg": 0.0, "Cl": 0.0, "SO4": 0.0}
+    def init_partition(self, fluid):
 
-        for comp in targetComps:
-            if comp in fluid.total.components:
-                if comp in [Comp.WATER, Comp.STEAM]:
-                    moles["H2O"] += fluid.total.moles[comp]
-                elif comp == Comp.Na_plus:
-                    moles["Na"] += fluid.total.moles[comp]
-                elif comp == Comp.K_plus:
-                    moles["K"] += fluid.total.moles[comp]
-                elif comp == Comp.Ca_plus2:
-                    moles["Ca"] += fluid.total.moles[comp]
-                elif comp == Comp.Mg_plus2:
-                    moles["Mg"] += fluid.total.moles[comp]
-                elif comp == Comp.Cl_minus:
-                    moles["Cl"] += fluid.total.moles[comp]
-                elif comp == Comp.SO4_minus2:
-                    moles["SO4"] += fluid.total.moles[comp]
-                elif comp in [Comp.CARBONDIOXIDE, Comp.CO3_minus2, Comp.CO2_aq]:
-                    moles["CO2"] += fluid.total.moles[comp]
+        self._components = {x: 0 for x in self._components}
+        self._molalities = {x: 0 for x in self._molalities}
 
-        for ion in molality:
-            molality[ion] += moles[ion] / (moles["H2O"]*MrH2O)
+        for i, comp in enumerate(fluid.total.components):
+            if comp in self._component_dict:
+                comp_name = self._component_dict[comp]
+                if fluid.total.units == Units.MASS:
+                    self._components[comp_name] += fluid.total.composition[i] * self._molar_masses[comp_name]
+                else:
+                    self._components[comp_name] += fluid.total.composition[i]
+            elif comp in self._compund_dict:
+                if fluid.total.units == Units.MASS:
+                    for com in self._compund_dict[comp]:
+                        self._components[com] += fluid.total.composition[i] * self._compund_dict[comp][com]*self._molar_masses[com]
+                else:
+                    for com in self._compund_dict[comp]:
+                        self._components[com] += fluid.total.composition[i] * self._compund_dict[comp][com]
+            else:
+                comps = ", ".join([i for i in self._component_dict]+[i for i in self._compund_dict])
+                msg = "The component \"{}\" is not recognised. The only permitted components for the Spycher-Pruess-2009 model are {}.".format(comp, comps)
+                raise ValueError(msg)
 
-        zH2O = moles["H2O"] / sum([moles[i] for i in moles])
-        zCO2 = moles["CO2"] / sum([moles[i] for i in moles])
+        tot_mol = sum([self._components[i] for i in self._components])
+        self._components = {comp:self._components[comp]/tot_mol for comp in self._components}
+
+        for ion in self._molalities:
+            self._molalities[ion] += self._components[ion] / (self._components["H2O"]*self._molar_masses["H2O"])
+
+        self.__initialised = True
+
+    def calc_partition(self, P, T, fluid):
+
+        if not self.__initialised:
+
+            self.init_partition(fluid)
+
+        zH2O = self._components["H2O"] / sum([self._components[i] for i in self._components])
+        zCO2 = self._components["CO2"] / sum([self._components[i] for i in self._components])
 
         water = cp.AbstractState("?", "Water")
         water.update(cp.QT_INPUTS, 0.5, T)
         Psat = water.p()
 
         if P > Psat:
-            yH2O, xCO2, xsalts = SpycherPruss2009().calc(T, P, molality)
+            yH2O, xCO2, xsalts = SpycherPruess2009().calc(T, P, self._molalities)
 
             yCO2 = 1 - yH2O
             xH2O = 1 - xCO2 - xsalts
@@ -986,48 +1008,120 @@ class SpycherPrussPartition:
         else:
             alpha = 1.1  # all the water has boiled off
 
-        components = [Comp.Na_plus, Comp.K_plus, Comp.Ca_plus2, Comp.Mg_plus2, Comp.Cl_minus, Comp.SO4_minus2]
-        composition = [fluid.total.mass[i] if i in fluid.total.components else 0.0 for i in components]
+        aqu_comps = ["Na+", "K+", "Ca+2", "Mg+2", "Cl-", "SO4-2"]
+        aqu_quant = [self._components[i] if i in self._components else 0.0 for i in aqu_comps]
 
-        mass_H2O = 0.0
-        if Comp.WATER in fluid.total.components:
-            mass_H2O += fluid.total.mass[Comp.WATER]
-
-        if Comp.STEAM in fluid.total.components:
-            mass_H2O += fluid.total.mass[Comp.STEAM]
-
-        mass_CO2 = 0.0
-        if Comp.CO2_aq in fluid.total.components:
-            mass_CO2 += fluid.total.mass[Comp.CO2_aq]
-
-        if Comp.CARBONDIOXIDE in fluid.total.components:
-            mass_CO2 += fluid.total.mass[Comp.CARBONDIOXIDE]
-        if Comp.CO3_minus2 in fluid.total.components:
-            mass_CO2 += fluid.total.mass[Comp.CO3_minus2] * 44 / 60
-
-        if alpha is None:
+        if alpha is None or alpha > 1:
             # water boiled off - lets see how this works out
-            components += [Comp.STEAM, Comp.CARBONDIOXIDE]
-            composition += [mass_H2O, mass_CO2]
+            vap_comps = ["H2O", "CO2"]
+            vap_quant = [self._components["H2O"], self._components["CO2"]]
+            # tot_mol = sum(vap_quant)
+            # vap_quant = [i/tot_mol for i in vap_quant]
+
+            fluid.vapour = VapourPhase(vap_comps, vap_quant, Units.MOL)
+
+            cations = self._components["Na+"] + self._components["K+"] + 2*self._components["Ca+2"] + 2*self._components["Mg+2"]
+            anions = self._components["Cl-"] + 2*self._components["SO4-2"]
+
+            temp_comps = [i for i in aqu_comps]
+            temp_quant = [i for i in aqu_quant]
+            tot_sol = sum(temp_quant)
+            if tot_sol > 0:
+
+                temp = {temp_comps[i]:temp_quant[i] for i in range(len(temp_comps))}
+
+                sol_comps = []
+                sol_quant = []
+
+                if self._components["Cl-"] > 0:
+                    nNaCl = min(temp["Na+"], temp["Cl-"])
+                    if nNaCl > 0:
+                        sol_comps.append("NaCl")
+                        sol_quant.append(nNaCl)
+
+                        temp["Na+"] -= nNaCl
+                        temp["Cl-"] -= nNaCl
+
+                    nKCl = min(temp["K+"], temp["Cl-"])
+                    if nKCl > 0:
+                        sol_comps.append("KCl")
+                        sol_quant.append(nKCl)
+
+                        temp["K+"] -= nKCl
+                        temp["Cl-"] -= nKCl
+
+                    nCaCl2 = min(temp["Ca+2"], temp["Cl-"]/2)
+                    if nCaCl2 > 0:
+                        sol_comps.append("CaCl2")
+                        sol_quant.append(nCaCl2)
+
+                        temp["Ca+"] -= nCaCl2
+                        temp["Cl-"] -= nCaCl2*2
+
+                    nMgCl2 = min(temp["Mg+2"], temp["Cl-"]/2)
+                    if nCaCl2 > 0:
+                        sol_comps.append("MgCl2")
+                        sol_quant.append(nMgCl2)
+
+                        temp["Mg+"] -= nMgCl2
+                        temp["Cl-"] -= nMgCl2*2
+
+                if self._components["SO4-2"] > 0:
+
+                    nNa2SO4 = min(temp["Na+"]/2, temp["SO4-2"])
+                    if nNa2SO4 > 0:
+                        sol_comps.append("Na2SO4")
+                        sol_quant.append(nNa2SO4)
+
+                        temp["Na+"] -= nNa2SO4*2
+                        temp["SO4-2"] -= nNa2SO4
+
+                    nK2SO4 = min(temp["K+"]/2, temp["SO4-2"])
+                    if nK2SO4 > 0:
+                        sol_comps.append("K2SO4")
+                        sol_quant.append(nK2SO4)
+
+                        temp["K+"] -= nK2SO4*2
+                        temp["SO4-2"] -= nK2SO4
+
+                    nCaSO4 = min(temp["Ca+2"], temp["SO4-2"])
+                    if nCaSO4 > 0:
+                        sol_comps.append("CaSO4")
+                        sol_quant.append(nCaSO4)
+
+                        temp["Ca+2"] -= nCaSO4
+                        temp["SO4-2"] -= nCaSO4
+
+                    nMgSO4 = min(temp["Mg+2"], temp["SO4-2"])
+                    if nMgSO4 > 0:
+                        sol_comps.append("MgSO4")
+                        sol_quant.append(nMgSO4)
+
+                        temp["Mg+2"] -= nMgSO4
+                        temp["SO4-2"] -= nMgSO4
+
+                # tot_sol = sum(sol_quant)
+                # sol_quant = [i/tot_sol if tot_sol>0 else 0 for i in sol_quant]
+                fluid.solid = SolidPhase(sol_comps, sol_quant, Units)
+
         elif alpha < 0:
             # the fluid is totally liquid
-            components += [Comp.WATER, Comp.CO2_aq]
-            composition += [mass_H2O, mass_CO2]
-        elif alpha > 1:
-            # the fluid is totally vapour
-            components += [Comp.STEAM, Comp.CARBONDIOXIDE]
-            composition += [mass_H2O, mass_CO2]
+            aqu_comps += ["H2O", "CO2"]
+            aqu_quant += [self._components["H2O"], self._components["CO2"]]
+
+            fluid.aqueous = AqueousPhase(aqu_comps, aqu_quant, Units.MOL)
         else:
             # two phase mixtures
-            components += [Comp.WATER, Comp.STEAM, Comp.CO2_aq, Comp.CARBONDIOXIDE]
-            n_tot = sum([fluid.total.moles[i] for i in fluid.total.components])
+            vap_comps = ["H2O", "CO2"]
+            vap_quant = [alpha * yH2O, alpha * yCO2]
+            # tot_vap = sum(vap_quant)
+            # vap_quant = [i/tot_vap for i in vap_quant]
 
-            m_WAT = n_tot * (1 - alpha) * xH2O * MrH2O
-            m_STEAM = n_tot * alpha * yH2O * MrH2O
-            m_CO2aq = n_tot * (1 - alpha) * xCO2 * MrCO2
-            m_CO2g = n_tot * alpha * yCO2 * MrCO2
+            fluid.vapour = VapourPhase(vap_comps, vap_quant, Units.MOL)
 
-            composition += [m_WAT, m_STEAM, m_CO2aq, m_CO2g]
+            aqu_comps += ["H2O", "CO2"]
+            aqu_quant += [(1 - alpha) * xH2O, (1 - alpha) * xCO2]
+            # tot_aqu = sum(aqu_quant)
+            # aqu_quant = [i / tot_aqu for i in aqu_quant]
 
-        # create a new fluid
-        return Fluid(components=components, composition=composition)
+            fluid.aqueous = AqueousPhase(aqu_comps, aqu_quant, Units.MOL)
