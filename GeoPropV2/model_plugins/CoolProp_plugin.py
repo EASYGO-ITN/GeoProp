@@ -1,5 +1,6 @@
 from enum import Enum
 import CoolProp as cp
+from CoolProp.CoolProp import PropsSI
 
 from .BaseModel import Model
 from ..model import factory
@@ -36,7 +37,7 @@ class CoolPropModel(Model):
 
     properties = ["D", "V", "Q", "H", "S"]
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, options={}, **kwargs):
 
         super().__init__(args, kwargs)
 
@@ -46,10 +47,10 @@ class CoolPropModel(Model):
         self.__h0 = 0.0
         self.__s0 = 0.0
 
-        default_opts = {"backend": "?"}  # add further options to this
-        if kwargs:
-            for opt in kwargs:
-                default_opts[opt] = kwargs[opt]
+        default_opts = {"backend": "?"}# add further options to this
+        if options:
+            for opt in options:
+                default_opts[opt] = options[opt]
 
         self.__backend = default_opts["backend"]
 
@@ -173,7 +174,7 @@ class CoolPropModel(Model):
                 msg = "The component {} is not recognised in CoolProp".format(comp)
                 raise ValueError(msg)
             component_string += comp + "&"
-            # molar_masses.append(cp.CoolProp.get_fluid_param_string(comp, "mass"))  # TODO look up what the correct key is to find the Mr
+            molar_masses.append(PropsSI("M", comp))
 
         # create the CoolProp Abstract state
         self.__state = cp.AbstractState(self.__backend, component_string[:-1])
