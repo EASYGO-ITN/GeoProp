@@ -15,3 +15,5 @@ Nothing
 
 Pref = 101325  # reference pressure in Pa
 Tref = 298  # reference temperature in K
+
+# TODO converting compositions should be handled globally, however this will need a global database of components...
