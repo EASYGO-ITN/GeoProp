@@ -32,15 +32,14 @@ class Phase:
     def __init__(self, components, quantity, units):
 
         self.components = components
-        self.composition = quantity
+        self.amount = sum(quantity)
+        self.composition = [i/self.amount for i in quantity]
         self.comp_dict = {components[i]: quantity[i] for i in range(len(components))}
         self.units = units
 
         self.pure = False
         if len(components) == 1:
             self.pure = True
-
-
 
     def phase_type(self):
 
@@ -54,6 +53,10 @@ class TotalPhase(Phase):
 
         self.__type = PhaseType.TOTAL
 
+    def phase_type(self):
+
+        return self.__type
+
 
 class SolidPhase(Phase):
 
@@ -61,6 +64,10 @@ class SolidPhase(Phase):
         super().__init__(components, quantity, units)
 
         self.__type = PhaseType.SOLID
+
+    def phase_type(self):
+
+        return self.__type
 
 
 class AqueousPhase(Phase):
@@ -70,6 +77,10 @@ class AqueousPhase(Phase):
 
         self.__type = PhaseType.AQUEOUS
 
+    def phase_type(self):
+
+        return self.__type
+
 
 class VapourPhase(Phase):
 
@@ -77,6 +88,10 @@ class VapourPhase(Phase):
         super().__init__(components, quantity, units)
 
         self.__type = PhaseType.VAPOUR
+
+    def phase_type(self):
+
+        return self.__type
 
 
 class ElementPhase(Phase):
@@ -86,13 +101,21 @@ class ElementPhase(Phase):
 
         self.__type = PhaseType.ELEMENT
 
+    def phase_type(self):
+
+        return self.__type
+
 
 class EmptyPhase(Phase):
 
     def __init__(self):
-        super().__init__(["None"], [0.0], Units.MOL)
+        super().__init__(["None"], [1.0], Units.MOL)
 
         self.__type = PhaseType.NONE
+
+    def phase_type(self):
+
+        return self.__type
 
 
 #
