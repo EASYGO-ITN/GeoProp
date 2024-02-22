@@ -16,7 +16,16 @@ class State:
             raise ValueError(msg)
 
         if "property_opts" not in config:
-            config["property_opts"] = {"solid": None, "aqueous": None, "vapour": None}
+            config["property_opts"] = {"solid": {}, "aqueous": {}, "vapour": {}}
+
+        if "solid" not in config["property_opts"]:
+            config["property_opts"]["solid"] = {}
+
+        if "aqueous" not in config["property_opts"]:
+            config["property_opts"]["aqueous"] = {}
+
+        if "vapour" not in config["property_opts"]:
+            config["property_opts"]["vapour"] = {}
 
         self.property_model = PropertyModel()
 
@@ -52,12 +61,13 @@ class PropertyModel:
 
     def calc(self, P, T, fluid):
 
-        solid_props = self.solid_model.calc_properties(P, T, fluid.solid, PhaseType.SOLID)
+        if fluid.solid.phase_type() == PhaseType.SOLID:
+            self.solid_model.calc_properties(P, T, fluid.solid, PhaseType.SOLID)
 
-        aqueous_props = self.aqueous_model.calc_properties(P, T, fluid.aqueous, PhaseType.AQUEOUS)
+        if fluid.aqueous.phase_type() == PhaseType.AQUEOUS:
+            self.aqueous_model.calc_properties(P, T, fluid.aqueous, PhaseType.AQUEOUS)
 
-        vapour_props = self.vapour_model.calc_properties(P, T, fluid.vapour, PhaseType.VAPOUR)
+        if fluid.vapour.phase_type() == PhaseType.VAPOUR:
+            self.vapour_model.calc_properties(P, T, fluid.vapour, PhaseType.VAPOUR)
 
         total_props = None
-
-        return total_props, solid_props, aqueous_props, vapour_props
